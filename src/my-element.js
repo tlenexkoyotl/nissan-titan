@@ -12,19 +12,26 @@ export class MyElement extends LitElement {
   static get properties() {
     return {
       /**
+       * Texto header 1
+       */
+      header1Text: { type: String },
+
+      /**
        * La url de la imagen 1
        */
-      image1Url: { type: String }
+      image1Url: { type: String },
     }
   }
 
   constructor() {
     super()
+    this.header1Text = "Nissan Titan"
     this.image1Url = "https://img.remediosdigitales.com/f4d16b/nissan_titan_warrior_concept_02/450_1000.jpg"
   }
 
   render() {
     return html`
+      <h1>${this.header1Text}</h1>
       <img src="${this.image1Url}">
     `
   }
